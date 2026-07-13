@@ -88,7 +88,8 @@ actions tied to the current ChatGPT user. Leave public content anonymous.
 ## Useful Commands
 
 - `npm run dev`: start local development
-- `npm run build`: verify the vinext build output
+- `npm run build`: run the platform-appropriate production build (Next.js on Windows, vinext for Sites)
+- `npm run build:next`: run the Next.js production build directly
 - `npm test`: build the starter and verify its rendered loading skeleton
 - `npm run db:generate`: generate Drizzle migrations after schema changes
 
