@@ -53,10 +53,10 @@ export function Archive({ gigs }: { gigs: Gig[] }) {
       </fieldset>
 
       <p className="sr-only" aria-live="polite">
-        Showing {shown.length} gig records.
+        Showing {shown.length} past shows.
       </p>
 
-      <ol className="gig-ledger">
+      <ol className="gig-list">
         {shown.map((gig) => (
           <li
             className="gig-row"
@@ -71,7 +71,6 @@ export function Archive({ gigs }: { gigs: Gig[] }) {
             <div className="gig-core">
               <h3>{gig.venue}</h3>
               <span className="sr-only">{gig.date}</span>
-              {gig.uncertain && <span className="source-flag">SOURCE UNCONFIRMED</span>}
             </div>
             <div className="gig-context">
               {gig.with && <p><b>WITH</b> {gig.with}</p>}

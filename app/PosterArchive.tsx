@@ -2,15 +2,15 @@
 
 import Image from "next/image";
 import { useEffect, useId, useRef, useState } from "react";
-import type { PosterArtifact } from "./data";
+import type { Poster } from "./data";
 
-export function PosterArchive({ posters }: { posters: PosterArtifact[] }) {
+export function PosterArchive({ posters }: { posters: Poster[] }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const openerRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const openerIndexRef = useRef<number | null>(null);
-  const ledgerTargetRef = useRef<string | null>(null);
+  const historyTargetRef = useRef<string | null>(null);
   const directBackdropPressRef = useRef(false);
   const idPrefix = useId().replace(/:/g, "");
 
@@ -58,17 +58,17 @@ export function PosterArchive({ posters }: { posters: PosterArtifact[] }) {
 
   function handleDialogClose() {
     const openerIndex = openerIndexRef.current;
-    const ledgerTarget = ledgerTargetRef.current;
-    ledgerTargetRef.current = null;
+    const historyTarget = historyTargetRef.current;
+    historyTargetRef.current = null;
     setActiveIndex(null);
 
     window.requestAnimationFrame(() => {
       window.requestAnimationFrame(() => {
-        if (ledgerTarget) {
-          const target = document.getElementById(ledgerTarget);
+        if (historyTarget) {
+          const target = document.getElementById(historyTarget);
           if (!target) return;
 
-          window.location.hash = ledgerTarget;
+          window.location.hash = historyTarget;
           target.scrollIntoView({
             behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
             block: "center",
@@ -82,9 +82,9 @@ export function PosterArchive({ posters }: { posters: PosterArtifact[] }) {
     });
   }
 
-  function openLedgerEntry(targetId: string) {
+  function openPastShow(targetId: string) {
     window.dispatchEvent(new CustomEvent("deadset:show-gig", { detail: { targetId } }));
-    ledgerTargetRef.current = targetId;
+    historyTargetRef.current = targetId;
     closeDialog();
   }
 
@@ -179,9 +179,9 @@ export function PosterArchive({ posters }: { posters: PosterArtifact[] }) {
                 <button
                   className="poster-dialog-history"
                   type="button"
-                  onClick={() => openLedgerEntry(activePoster.linkedGigId!)}
+                  onClick={() => openPastShow(activePoster.linkedGigId!)}
                 >
-                  View matching ledger entry
+                  View past show
                 </button>
               )}
             </div>

@@ -24,19 +24,19 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(origin),
     title: "Deadset — Madison, Wisconsin",
-    description: "Deadset's live archive, upcoming shows, hand-drawn marks, and booking contact.",
-    icons: { icon: "/media/logo5.png", shortcut: "/media/logo5.png" },
+    description: "Deadset is an indie rock band from Madison, Wisconsin. Live shows, posters, and booking.",
+    icons: { icon: "/media/logo7.png", shortcut: "/media/logo7.png" },
     openGraph: {
       title: "Deadset — Madison, Wisconsin",
-      description: "Live archive 2025—now.",
+      description: "Indie rock from Madison, Wisconsin. Shows, posters, and booking.",
       type: "website",
-      images: [{ url: "/og.jpg", width: 1731, height: 909, alt: "Deadset live archive in Madison, Wisconsin" }],
+      images: [{ url: "/og.png", width: 1792, height: 1024, alt: "Deadset, indie rock from Madison, Wisconsin" }],
     },
     twitter: {
       card: "summary_large_image",
       title: "Deadset — Madison, Wisconsin",
-      description: "Live archive 2025—now.",
-      images: ["/og.jpg"],
+      description: "Indie rock from Madison, Wisconsin. Shows, posters, and booking.",
+      images: ["/og.png"],
     },
   };
 }
