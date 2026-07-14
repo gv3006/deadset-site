@@ -18,8 +18,8 @@ export default function Home() {
           <span>DEADSET</span>
         </a>
         <nav aria-label="Primary navigation">
+          <a href="#about">About</a>
           <a href="#shows">Shows</a>
-          <a href="#photos">Live</a>
           <a href="#history">History</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -67,7 +67,7 @@ export default function Home() {
             {/* TODO: Replace with official Deadset biography when available. */}
           </div>
           <figure className="about-photo">
-            <Image src="/media/live/hero-live.jpg" width={1536} height={2048} sizes="(max-width: 800px) 92vw, 46vw" alt="Members of Deadset performing together onstage" />
+            <Image src="/media/live/hero-live.jpg" width={1536} height={2048} sizes="(max-width: 900px) 92vw, 36vw" alt="Members of Deadset performing together onstage" />
           </figure>
         </section>
 
@@ -84,24 +84,21 @@ export default function Home() {
                 <h3>Summer patio<br />series</h3>
                 <div className="ticket-meta"><span>Free</span><span>Two-hour set</span><span>Thursday</span></div>
               </div>
+              <figure className="ticket-photo">
+                <Image src="/media/live/full-band-stage.jpg" width={2048} height={1536} sizes="(max-width: 680px) 92vw, (max-width: 900px) 88vw, 31vw" alt="Deadset performing together onstage under red and purple lights" />
+              </figure>
               <Image className="ticket-stamp" src="/media/logo0.png" width={1254} height={1254} sizes="(max-width: 680px) 80vw, 34vw" alt="" />
             </article>
           )) : <p className="next-dates">New dates coming soon. Follow <a href="https://www.instagram.com/deadsetwi/" target="_blank" rel="noreferrer">@deadsetwi</a> for announcements.</p>}
           <p className="show-follow">More dates are coming. Follow <a href="https://www.instagram.com/deadsetwi/" target="_blank" rel="noreferrer">@deadsetwi</a> for announcements.</p>
         </section>
 
-        <section className="live-section ink-section section-pad" id="photos" aria-labelledby="live-heading">
-          <div className="live-heading"><p className="micro-label">Live photos</p><h2 id="live-heading">The set<br />in motion.</h2></div>
-          <div className="live-grid">
-            <figure className="live-wide"><Image src="/media/live/live-wide.jpg" width={2048} height={1536} sizes="(max-width: 800px) 92vw, 62vw" alt="Deadset performing together under purple stage lighting" /></figure>
-            <figure className="live-tall"><Image src="/media/live/bass-closeup.jpg" width={1536} height={2048} sizes="(max-width: 800px) 60vw, 28vw" alt="Deadset bassist performing under red and purple lights" /></figure>
-            <figure className="live-detail"><Image src="/media/live/bass-stage.jpg" width={1536} height={2048} sizes="(max-width: 800px) 60vw, 28vw" alt="Deadset bassist onstage with the drummer behind her" /></figure>
-          </div>
-        </section>
-
         <section className="archive-section section-pad" id="history">
           <div className="archive-intro">
             <div className="section-heading"><p className="micro-label">Past shows</p><h2>Where we&apos;ve<br />played.</h2></div>
+            <figure className="archive-photo">
+              <Image src="/media/live/bass-stage.jpg" width={1536} height={2048} sizes="(max-width: 680px) 62vw, (max-width: 900px) 28vw, 18vw" alt="Deadset bassist performing onstage with the drummer behind her" />
+            </figure>
             <div className="archive-note"><p>Past bills, benefits, acoustic sets, house shows, and the flyers that marked Deadset&apos;s run around Madison. Open a flyer for the full view.</p></div>
           </div>
           <div className="archive-rule" aria-hidden="true" />
