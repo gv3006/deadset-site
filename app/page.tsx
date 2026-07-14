@@ -44,9 +44,6 @@ export default function Home() {
                 alt=""
                 priority
               />
-              <span className="hero-logo-glitch hero-logo-glitch-red" aria-hidden="true" />
-              <span className="hero-logo-glitch hero-logo-glitch-acid" aria-hidden="true" />
-              <span className="hero-logo-scan" aria-hidden="true" />
             </h1>
             <p className="hero-tagline">
               <span>Indie Rock</span>
