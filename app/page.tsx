@@ -113,7 +113,6 @@ export default function Home() {
                 <Image src="/media/live/bass-closeup.jpg" width={1536} height={2048} sizes="(max-width: 680px) 26vw, (max-width: 900px) 20vw, 13vw" alt="" />
               </figure>
             </div>
-            <div className="archive-note"><p>Past bills, benefits, acoustic sets, house shows, and the flyers that marked Deadset&apos;s run around Madison. Open a flyer for the full view.</p></div>
           </div>
           <div className="archive-rule" aria-hidden="true" />
           <Archive gigs={pastGigs} posters={posters} />
