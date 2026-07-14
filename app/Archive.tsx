@@ -137,7 +137,6 @@ export function Archive({ gigs, posters }: { gigs: Gig[]; posters: Poster[] }) {
               </div>
               <div className="gig-context">
                 {gig.with && <p><b>WITH</b> {gig.with}</p>}
-                {gig.note && <p><b>NOTE</b> {gig.note}</p>}
               </div>
               {linkedPoster && (
                 <button
