@@ -14,7 +14,7 @@ export default function Home() {
 
       <header className="site-header" data-hero-nav>
         <a className="brand-lockup" href="#top" aria-label="Deadset, back to top">
-          <Image src="/media/logo7.png" width={44} height={44} sizes="44px" alt="" priority />
+          <Image src="/media/logo7-white.png" width={44} height={44} sizes="44px" alt="" priority />
           <span>DEADSET</span>
         </a>
         <nav aria-label="Primary navigation">
@@ -37,7 +37,7 @@ export default function Home() {
             <h1 className="hero-wordmark" id="hero-title" aria-label="Deadset">
               <Image
                 className="hero-logo"
-                src="/media/logo7.png"
+                src="/media/logo7-white.png"
                 width={1254}
                 height={1254}
                 sizes="(max-width: 680px) 80vw, (max-width: 900px) 54vw, 34vw"
@@ -61,7 +61,7 @@ export default function Home() {
         </section>
 
         <aside className="signal-strip" aria-label="Deadset at a glance">
-          <span>Madison, WI</span><b>Indie rock / rock</b><span>{pastGigs.length} shows and counting</span><b>New music in the works</b>
+          <span>Madison, WI</span><b>Indie rock / rock</b><span aria-hidden="true" /> <b>New music in the works</b>
         </aside>
 
         <section className="about-section paper-section section-pad" id="about">
@@ -150,7 +150,7 @@ export default function Home() {
         </section>
 
         <section className="contact-section ink-section section-pad" id="contact">
-          <Image className="contact-mark" src="/media/logo7.png" width={1254} height={1254} sizes="(max-width: 680px) 135vw, min(74vw, 1000px)" alt="" />
+          <Image className="contact-mark" src="/media/logo7-white.png" width={1254} height={1254} sizes="(max-width: 680px) 135vw, min(74vw, 1000px)" alt="" />
           <div className="contact-copy"><p className="micro-label">Booking / shows / other inquiries</p><h2>Book<br />Deadset.</h2><p className="contact-intro">For booking, shows, or anything else, get in touch.</p><div className="contact-links"><a href="mailto:deadsetbandwi@gmail.com">deadsetbandwi@gmail.com <span aria-hidden="true">↗</span></a><a href="https://www.instagram.com/deadsetwi/" target="_blank" rel="noreferrer">@deadsetwi <span aria-hidden="true">↗</span></a></div></div>
         </section>
       </main>

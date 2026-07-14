@@ -53,7 +53,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .motion-enhanced .site-header { opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(-112%); }
 .motion-enhanced .site-header.is-visible { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); }
 .brand-lockup { min-height: 44px; display: flex; align-items: center; gap: 0.55rem; text-decoration: none; font: 900 0.76rem/1 var(--label); letter-spacing: 0.15em; }
-.brand-lockup img { width: 44px; height: 44px; object-fit: contain; filter: invert(1); mix-blend-mode: screen; }
+.brand-lockup img { width: 55px; height: 55px; object-fit: contain; filter: none; mix-blend-mode: normal; }
 .site-header nav { display: flex; align-items: center; gap: clamp(0.8rem, 2.4vw, 2.3rem); }
 .site-header nav a { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; position: relative; text-decoration: none; font: 800 0.72rem/1 var(--label); letter-spacing: 0.14em; text-transform: uppercase; }
 .site-header nav a::after { content: ""; position: absolute; top: calc(100% + 7px); left: 0; width: 100%; border-top: 2px solid var(--acid); transform: scaleX(0); transform-origin: left; transition: transform 180ms ease; }
@@ -138,8 +138,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 .hero-wordmark {
   position: relative; display: block;
-  width: clamp(20.7rem, min(39.1vw, 55.2svh), 34.5rem); aspect-ratio: 1; margin: 0;
-  overflow: hidden; background: var(--paper);
+  width: clamp(25.875rem, min(48.875vw, 69svh), 43.125rem); aspect-ratio: 1; margin: 0;
+  overflow: hidden; background: transparent;
   transform-origin: 50% 55%;
 }
 .hero-wordmark::after {
@@ -355,8 +355,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .quiet-section p:last-child { max-width: 39rem; font-size: 1.05rem; line-height: 1.5; text-shadow: 0 1px 12px rgba(0,0,0,.7); }
 
 .contact-section { min-height: 88svh; position: relative; isolation: isolate; overflow: hidden; display: flex; align-items: center; }
-.contact-mark { position: absolute; z-index: -1; right: 0vw; width: min(74vw, 1000px); filter: invert(1); mix-blend-mode: screen; opacity: .16; transform: rotate(4deg); }
-.contact-copy { width: 100%; }
+.contact-mark { position: absolute; z-index: 0; right: 0vw; width: min(74vw, 1000px); filter: none; mix-blend-mode: screen; opacity: .16; transform: rotate(4deg); pointer-events: none; }
+.contact-copy { position: relative; z-index: 1; width: 100%; }
 .contact-copy .micro-label { color: var(--acid); }
 .contact-copy h2 { font-size: clamp(4.6rem, 12vw, 12rem); }
 .contact-links { display: flex; flex-direction: column; align-items: flex-start; gap: .9rem; margin-top: clamp(2.6rem, 5vw, 5rem); }
@@ -369,7 +369,7 @@ footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.5r
 @media (max-width: 900px) {
   .hero, .hero-poster { min-height: max(720px, 100svh); }
   .hero-poster { width: min(95vw, 860px); padding-top: clamp(6rem, 12svh, 8rem); }
-  .hero-wordmark { width: clamp(20.7rem, min(62.1vw, 51.75svh), 28.75rem); }
+  .hero-wordmark { width: clamp(25.875rem, min(77.625vw, 64.6875svh), 35.9375rem); }
   .hero-tagline { font-size: clamp(2.45rem, 6.6vw, 4rem); }
   .hero-tear-top-right { width: 44vw; height: 30vw; }
   .hero-tear-bottom-left { width: 44vw; height: 39vw; }
@@ -399,7 +399,7 @@ footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.5r
   .section-pad { padding: 5rem 1rem; }
   .hero, .hero-poster { min-height: max(660px, 100svh); }
   .hero-poster { width: 100%; padding: max(5.7rem, 10svh) .65rem max(2rem, 4svh); }
-  .hero-wordmark { width: clamp(17.825rem, min(92vw, 47.15svh), 23rem); }
+  .hero-wordmark { width: clamp(22.28125rem, min(100vw, 58.9375svh), 28.75rem); }
   .hero-tagline { margin-top: clamp(3rem, 6svh, 4rem); font-size: clamp(2.15rem, 10.2vw, 3.6rem); line-height: .92; }
   .hero-actions { grid-template-columns: minmax(0, 1fr) 34px minmax(0, 1fr); gap: .55rem; width: min(100%, 390px); margin-top: clamp(2.1rem, 5svh, 3.2rem); }
   .hero-link { min-width: 0; min-height: 52px; gap: .48rem; padding-inline: .2rem; font-size: clamp(.56rem, 2.7vw, .7rem); letter-spacing: .08em; }
