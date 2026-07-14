@@ -35,9 +35,15 @@ export default function Home() {
           </div>
           <div className="hero-poster">
             <h1 className="hero-wordmark" id="hero-title" aria-label="Deadset">
-              {Array.from("DEADSET").map((letter, index) => (
-                <span className={`hero-letter hero-letter-${index + 1}`} aria-hidden="true" key={`${letter}-${index}`}>{letter}</span>
-              ))}
+              <Image
+                className="hero-logo"
+                src="/media/logo7.png"
+                width={1254}
+                height={1254}
+                sizes="(max-width: 680px) 80vw, (max-width: 900px) 54vw, 34vw"
+                alt=""
+                priority
+              />
             </h1>
             <p className="hero-tagline">
               <span>Indie Rock</span>

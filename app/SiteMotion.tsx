@@ -30,7 +30,7 @@ export function SiteMotion() {
       const hero = root.querySelector<HTMLElement>(".hero");
       const heroPoster = root.querySelector<HTMLElement>(".hero-poster");
       const heroWordmark = root.querySelector<HTMLElement>(".hero-wordmark");
-      const heroLetters = Array.from(root.querySelectorAll<HTMLElement>(".hero-letter"));
+      const heroLogo = root.querySelector<HTMLElement>(".hero-logo");
       const heroTagline = root.querySelector<HTMLElement>(".hero-tagline");
       const heroTaglineLines = Array.from(root.querySelectorAll<HTMLElement>(".hero-tagline > span"));
       const heroActions = root.querySelector<HTMLElement>(".hero-actions");
@@ -64,9 +64,9 @@ export function SiteMotion() {
       }
 
       const buildHeroArrival = (mobile: boolean, onReady: () => void) => {
-        if (!heroWordmark || !heroLetters.length || !heroTaglineLines.length || !heroActions) return null;
+        if (!heroWordmark || !heroLogo || !heroTaglineLines.length || !heroActions) return null;
 
-        const animated = [heroWordmark, ...heroLetters, ...heroTaglineLines, heroActions, ...heroTears];
+        const animated = [heroLogo, ...heroTaglineLines, heroActions, ...heroTears];
         gsap.set(animated, { willChange: "transform, opacity" });
 
         const timeline = gsap.timeline({
@@ -92,13 +92,13 @@ export function SiteMotion() {
         }
 
         timeline.from(
-          heroLetters,
+          heroLogo,
           {
             y: mobile ? 20 : 34,
-            rotation: (index) => index % 2 ? 2.2 : -2.2,
+            rotation: mobile ? -.8 : -1.2,
+            scale: mobile ? .96 : .94,
             opacity: 0,
             duration: mobile ? .46 : .66,
-            stagger: mobile ? .025 : .04,
             ease: "expo.out",
           },
           mobile ? .08 : .12,
@@ -188,7 +188,7 @@ export function SiteMotion() {
           if (reduce) {
             const staticTargets = [
               heroWordmark,
-              ...heroLetters,
+              heroLogo,
               ...heroTaglineLines,
               heroActions,
               ...heroTears,
