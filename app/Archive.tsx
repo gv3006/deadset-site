@@ -7,7 +7,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type { Gig, Poster } from "./data";
 
 const filters = ["ALL", "2026", "2025"] as const;
-
 export function Archive({ gigs, posters }: { gigs: Gig[]; posters: Poster[] }) {
   const [filter, setFilter] = useState<(typeof filters)[number]>("ALL");
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
