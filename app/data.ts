@@ -26,7 +26,7 @@ export const posters: Poster[] = [
   { id: "gold-soundz", src: "/media/posters/poster6.jpg", alt: "Deadset, The Precipitators, Ayewannabe, and Faux Beaux illustrated flyer", label: "Gold Soundz", note: "February 27, 2026 · $10", linkedGigId: "gig-2026-02-27" },
   { id: "rigby-january", src: "/media/posters/poster7.jpg", alt: "Hand-drawn Deadset, Tollbooth, Prairie Smoke, and Faux Beaux flyer for the Rigby", label: "The Rigby", note: "January 29, 2026 · $5", linkedGigId: "gig-2026-01-29" },
   { id: "badgerpalooza", src: "/media/posters/poster8.jpg", alt: "Badgerpalooza 2025 flyer for Union South", label: "Badgerpalooza", note: "December 5–6, 2025 · Union South", linkedGigId: "gig-2025-12-05" },
-  { id: "roxxy", src: "/media/posters/poster9.jpg", alt: "Deadset, Blush, and Yolk flyer for the Roxxy", label: "The Roxxy", note: "April 4 · Deadset, Blush, and Yolk" },
+  { id: "roxxy", src: "/media/posters/poster9.jpg", alt: "Deadset, Blush, and Yolk flyer for the Roxxy", label: "The Roxxy", note: "April 4, 2025 · Deadset, Blush, and Yolk", linkedGigId: "gig-2025-04-04" },
 ];
 
 export const gigs: Gig[] = [
@@ -44,4 +44,5 @@ export const gigs: Gig[] = [
   { date: "November 15, 2025", shortDate: "11.15", year: "2025", venue: "Nottingham Ballroom", with: "Friendly Spectres · Haha Laughing · Eat Turf", note: "$10" },
   { date: "November 9, 2025", shortDate: "11.09", year: "2025", venue: "Cardinal Bar", with: "Visiosn · Prairie Smoke · Faux Beaux", note: "$5" },
   { date: "October 11, 2025", shortDate: "10.11", year: "2025", venue: "House Show", with: "Blush" },
+  { date: "April 4, 2025", shortDate: "04.04", year: "2025", venue: "The Roxxy", with: "Blush · Yolk", note: "$5 cover · Doors 7:00 · Music 7:30" },
 ];

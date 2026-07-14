@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Archive } from "./Archive";
 import { gigs, posters } from "./data";
-import { PosterArchive } from "./PosterArchive";
 import { SiteMotion } from "./SiteMotion";
 
 export default function Home() {
@@ -13,7 +12,7 @@ export default function Home() {
       <SiteMotion />
       <a className="skip-link" href="#main">Skip to content</a>
 
-      <header className="site-header">
+      <header className="site-header" data-hero-nav>
         <a className="brand-lockup" href="#top" aria-label="Deadset, back to top">
           <Image src="/media/logo7.png" width={44} height={44} sizes="44px" alt="" priority />
           <span>DEADSET</span>
@@ -21,28 +20,38 @@ export default function Home() {
         <nav aria-label="Primary navigation">
           <a href="#shows">Shows</a>
           <a href="#photos">Live</a>
-          <a href="#posters">Posters</a>
+          <a href="#history">History</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
 
       <main id="main" data-motion-root>
-        <section className="hero ink-section" id="top">
-          <Image className="hero-mark" src="/media/logo7.png" width={1254} height={1254} sizes="(max-width: 680px) 132vw, min(73vw, 920px)" alt="" />
-          <div className="hero-copy">
-            <p className="kicker">Indie rock / rock · Madison, Wisconsin</p>
-            <h1>DEAD<br />SET.</h1>
-            <p className="hero-deck">Loud guitars, live rooms, and more on the way.</p>
-            <div className="hero-actions">
-              <a className="text-link on-dark" href="#shows">Upcoming shows <span aria-hidden="true">↓</span></a>
-              <a className="text-link on-dark" href="https://www.instagram.com/deadsetwi/" target="_blank" rel="noreferrer">Follow on Instagram <span aria-hidden="true">↗</span></a>
+        <section className="hero ink-section" id="top" aria-labelledby="hero-title">
+          <div className="hero-paper" aria-hidden="true">
+            <span className="hero-fold-line" />
+            <span className="hero-tear hero-tear-top-right" />
+            <span className="hero-tear hero-tear-left" />
+            <span className="hero-tear hero-tear-bottom-left" />
+          </div>
+          <div className="hero-poster">
+            <h1 className="hero-wordmark" id="hero-title" aria-label="Deadset">
+              {Array.from("DEADSET").map((letter, index) => (
+                <span className={`hero-letter hero-letter-${index + 1}`} aria-hidden="true" key={`${letter}-${index}`}>{letter}</span>
+              ))}
+            </h1>
+            <p className="hero-tagline">
+              <span>Indie Rock</span>
+              <span>From Madison, WI</span>
+            </p>
+            <div className="hero-actions" aria-label="Featured links">
+              <a className="hero-link" href="#shows">Upcoming shows</a>
+              <span className="hero-star" aria-hidden="true" />
+              <a className="hero-link hero-link-instagram" href="https://www.instagram.com/deadsetwi/" target="_blank" rel="noreferrer">
+                <span className="instagram-mark" aria-hidden="true" />
+                <span>@deadsetwi</span>
+              </a>
             </div>
           </div>
-          <figure className="hero-photo-frame">
-            <Image src="/media/live/hero-live.jpg" width={1536} height={2048} sizes="(max-width: 680px) 76vw, (max-width: 900px) 30vw, 390px" alt="Deadset performing live onstage under purple lights" priority />
-            <figcaption><span>LIVE IN MADISON</span><span>2026</span></figcaption>
-          </figure>
-          <div className="hero-index" aria-hidden="true"><span>DEADSET / MADISON, WI</span><span>SCROLL FOR SHOWS</span></div>
         </section>
 
         <aside className="signal-strip" aria-label="Deadset at a glance">
@@ -58,7 +67,7 @@ export default function Home() {
             {/* TODO: Replace with official Deadset biography when available. */}
           </div>
           <figure className="about-photo">
-            <Image src="/media/live/full-band-stage.jpg" width={2048} height={1536} sizes="(max-width: 800px) 92vw, 46vw" alt="All four members of Deadset performing together onstage" />
+            <Image src="/media/live/hero-live.jpg" width={1536} height={2048} sizes="(max-width: 800px) 92vw, 46vw" alt="Members of Deadset performing together onstage" />
           </figure>
         </section>
 
@@ -90,25 +99,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="poster-section ink-section" id="posters" aria-labelledby="posters-heading">
-          <div className="poster-stage">
-            <div className="poster-wall-copy">
-              <p className="micro-label">Show posters</p>
-              <h2 id="posters-heading">Flyers from<br />the floor.</h2>
-              <p className="poster-deck">A run of Deadset shows around Madison. Open a flyer for the full view and show details.</p>
-            </div>
-            <PosterArchive posters={posters} />
-            <div className="poster-exit-line" aria-hidden="true"><span>PAST SHOWS</span><i /><span>MADISON, WI</span></div>
-          </div>
-        </section>
-
         <section className="archive-section section-pad" id="history">
           <div className="archive-intro">
             <div className="section-heading"><p className="micro-label">Past shows</p><h2>Where we&apos;ve<br />played.</h2></div>
-            <div className="archive-note"><p>Past bills, benefits, acoustic sets, and house shows from Deadset&apos;s run around Madison.</p></div>
+            <div className="archive-note"><p>Past bills, benefits, acoustic sets, house shows, and the flyers that marked Deadset&apos;s run around Madison. Open a flyer for the full view.</p></div>
           </div>
           <div className="archive-rule" aria-hidden="true" />
-          <Archive gigs={pastGigs} />
+          <Archive gigs={pastGigs} posters={posters} />
         </section>
 
         <section className="quiet-section section-pad" aria-labelledby="music-heading">
