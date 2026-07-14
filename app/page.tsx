@@ -59,6 +59,14 @@ export default function Home() {
         </aside>
 
         <section className="about-section paper-section section-pad" id="about">
+          <div className="section-atmosphere about-atmosphere" aria-hidden="true">
+            <Image
+              src="/media/atmosphere/drummer-candid.jpg"
+              alt=""
+              fill
+              sizes="(max-width: 680px) 88vw, (max-width: 900px) 72vw, 54vw"
+            />
+          </div>
           <div className="about-copy">
             <p className="micro-label">About Deadset</p>
             <h2>Built for the<br />live room.</h2>
@@ -93,6 +101,14 @@ export default function Home() {
         </section>
 
         <section className="upcoming paper-section section-pad" id="shows">
+          <div className="section-atmosphere shows-atmosphere" aria-hidden="true">
+            <Image
+              src="/media/atmosphere/birds-nest-marquee.jpg"
+              alt=""
+              fill
+              sizes="(max-width: 680px) 105vw, (max-width: 900px) 90vw, 68vw"
+            />
+          </div>
           <div className="section-heading">
             <p className="micro-label">Upcoming shows</p>
             <h2>See you<br />out there.</h2>
@@ -117,29 +133,20 @@ export default function Home() {
         <section className="archive-section section-pad" id="history">
           <div className="archive-intro">
             <div className="section-heading"><p className="micro-label">Past shows</p><h2>Where we&apos;ve<br />played.</h2></div>
-            <div className="archive-photo-cloud" aria-hidden="true">
-              <figure className="archive-cloud-photo archive-cloud-photo-a">
-                <Image src="/media/live/full-band-stage.jpg" width={2048} height={1536} sizes="(max-width: 680px) 68vw, (max-width: 900px) 48vw, 32vw" alt="" />
-              </figure>
-              <figure className="archive-cloud-photo archive-cloud-photo-b">
-                <Image src="/media/live/hero-live.jpg" width={1536} height={2048} sizes="(max-width: 680px) 31vw, (max-width: 900px) 24vw, 17vw" alt="" />
-              </figure>
-              <figure className="archive-cloud-photo archive-cloud-photo-c">
-                <Image src="/media/live/live-wide.jpg" width={2048} height={1536} sizes="(max-width: 680px) 62vw, (max-width: 900px) 44vw, 28vw" alt="" />
-              </figure>
-              <figure className="archive-cloud-photo archive-cloud-photo-d">
-                <Image src="/media/live/bass-stage.jpg" width={1536} height={2048} sizes="(max-width: 680px) 29vw, (max-width: 900px) 22vw, 15vw" alt="" />
-              </figure>
-              <figure className="archive-cloud-photo archive-cloud-photo-e">
-                <Image src="/media/live/bass-closeup.jpg" width={1536} height={2048} sizes="(max-width: 680px) 26vw, (max-width: 900px) 20vw, 13vw" alt="" />
-              </figure>
-            </div>
           </div>
           <div className="archive-rule" aria-hidden="true" />
           <Archive gigs={pastGigs} posters={posters} />
         </section>
 
         <section className="quiet-section section-pad" aria-labelledby="music-heading">
+          <div className="section-atmosphere music-atmosphere" aria-hidden="true">
+            <Image
+              src="/media/atmosphere/acoustic-red.jpg"
+              alt=""
+              fill
+              sizes="100vw"
+            />
+          </div>
           <Image src="/media/logo1.png" width={1254} height={1254} sizes="(max-width: 680px) 150px, 360px" alt="" />
           <div><p className="micro-label">Music</p><h2 id="music-heading">New music is in the works.</h2><p>Deadset is recording now. Follow along for updates and listen links when they land.</p>{/* TODO: Add official streaming and release links when available. */}</div>
         </section>
