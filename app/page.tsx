@@ -62,13 +62,34 @@ export default function Home() {
           <div className="about-copy">
             <p className="micro-label">About Deadset</p>
             <h2>Built for the<br />live room.</h2>
-            <p>Deadset is an indie rock band based in Madison, Wisconsin, playing shows throughout the local scene.</p>
-            <p>Catch the next set, dig into the flyers, and keep an ear out—we&apos;re recording new music now.</p>
+            <p>We can say anything we want here.</p>
+            <p>For instance I can say that Louis sucks and George is the coolest guy.</p>
             {/* TODO: Replace with official Deadset biography when available. */}
           </div>
           <figure className="about-photo">
             <Image src="/media/live/hero-live.jpg" width={1536} height={2048} sizes="(max-width: 900px) 92vw, 36vw" alt="Members of Deadset performing together onstage" />
           </figure>
+
+          <div className="about-members" aria-labelledby="members-heading">
+            <div className="members-heading">
+              <p className="micro-label">The lineup</p>
+              <h3 id="members-heading">Meet our members.</h3>
+            </div>
+            <div className="member-grid">
+              <figure className="member-photo">
+                <Image src="/media/members/bass.jpg" width={1536} height={2048} sizes="(max-width: 680px) 44vw, (max-width: 900px) 42vw, 22vw" alt="Deadset bassist performing under pink and purple stage lights" />
+              </figure>
+              <figure className="member-photo">
+                <Image src="/media/members/vocals-guitar.jpg" width={1170} height={780} sizes="(max-width: 680px) 44vw, (max-width: 900px) 42vw, 22vw" alt="Deadset vocalist and guitarist performing with an acoustic guitar" />
+              </figure>
+              <figure className="member-photo">
+                <Image src="/media/members/drums.jpg" width={1170} height={780} sizes="(max-width: 680px) 44vw, (max-width: 900px) 42vw, 22vw" alt="Deadset drummer performing in black and white" />
+              </figure>
+              <figure className="member-photo">
+                <Image src="/media/members/guitar.jpg" width={2304} height={1536} sizes="(max-width: 680px) 44vw, (max-width: 900px) 42vw, 22vw" alt="Deadset guitarist performing onstage" />
+              </figure>
+            </div>
+          </div>
         </section>
 
         <section className="upcoming paper-section section-pad" id="shows">
