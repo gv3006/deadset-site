@@ -84,15 +84,19 @@ export default function Home() {
             <div className="member-grid">
               <figure className="member-photo">
                 <Image src="/media/members/bass.jpg" width={1536} height={2048} sizes="(max-width: 680px) 44vw, (max-width: 900px) 42vw, 22vw" alt="Deadset bassist performing under pink and purple stage lights" />
+                <figcaption>Camory Repenshek</figcaption>
               </figure>
               <figure className="member-photo">
                 <Image src="/media/members/vocals-guitar.jpg" width={1170} height={780} sizes="(max-width: 680px) 44vw, (max-width: 900px) 42vw, 22vw" alt="Deadset vocalist and guitarist performing with an acoustic guitar" />
+                <figcaption>Matt Lemes</figcaption>
               </figure>
               <figure className="member-photo">
                 <Image src="/media/members/drums.jpg" width={1170} height={780} sizes="(max-width: 680px) 44vw, (max-width: 900px) 42vw, 22vw" alt="Deadset drummer performing in black and white" />
+                <figcaption>George Verdelis</figcaption>
               </figure>
               <figure className="member-photo">
                 <Image src="/media/members/guitar.jpg" width={2304} height={1536} sizes="(max-width: 680px) 44vw, (max-width: 900px) 42vw, 22vw" alt="Deadset guitarist performing onstage" />
+                <figcaption>Louie Thares</figcaption>
               </figure>
             </div>
           </div>
