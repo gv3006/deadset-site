@@ -173,33 +173,51 @@ button, a { -webkit-tap-highlight-color: transparent; }
   mix-blend-mode: screen;
   will-change: top, transform, opacity;
 }
-.motion-enhanced .hero-logo-glitch-red { animation: hero-glitch-red 5.4s steps(1, end) 1.35s infinite; }
-.motion-enhanced .hero-logo-glitch-acid { animation: hero-glitch-acid 5.4s steps(1, end) 1.38s infinite; }
-.motion-enhanced .hero-logo-scan { animation: hero-glitch-scan 5.4s cubic-bezier(.7, 0, .3, 1) 1.35s infinite; }
+.motion-enhanced .hero-logo { animation: hero-logo-dropout 7.9s steps(1, end) 1.6s infinite; }
+.motion-enhanced .hero-logo-glitch-red { animation: hero-glitch-red 5.9s steps(1, end) 1.25s infinite; }
+.motion-enhanced .hero-logo-glitch-acid { animation: hero-glitch-acid 7.1s steps(1, end) 2.15s infinite; }
+.motion-enhanced .hero-logo-scan { animation: hero-glitch-scan 9.7s cubic-bezier(.7, 0, .3, 1) .85s infinite; }
+
+@keyframes hero-logo-dropout {
+  0%, 25.5%, 26.5%, 61.8%, 62.8%, 88%, 89%, 100% { filter: none; transform: translate(0); }
+  25.6% { filter: drop-shadow(5px 0 0 rgba(255, 48, 36, .72)) drop-shadow(-4px 0 0 rgba(215, 255, 56, .62)); transform: translate(2px, -1px); }
+  26% { filter: contrast(1.35); transform: translate(-2px, 1px); }
+  61.9% { filter: drop-shadow(-7px 0 0 rgba(255, 48, 36, .66)); transform: translate(-3px); }
+  62.3% { filter: drop-shadow(5px 0 0 rgba(215, 255, 56, .7)); transform: translate(2px, 1px); }
+  88.1% { filter: brightness(.72) contrast(1.65); transform: translate(1px, -2px); }
+  88.5% { filter: drop-shadow(3px 0 0 rgba(255, 48, 36, .6)); transform: translate(-1px, 1px); }
+}
 
 @keyframes hero-glitch-red {
-  0%, 70%, 75.2%, 100% { opacity: 0; transform: translate(0); clip-path: inset(0); }
-  70.2% { opacity: .82; transform: translate(-13px, 1px); clip-path: inset(9% 0 70%); }
-  71% { opacity: .56; transform: translate(9px, -2px); clip-path: inset(43% 0 34%); }
-  71.8% { opacity: 0; transform: translate(0); clip-path: inset(0); }
-  72.1% { opacity: .7; transform: translate(-7px, 2px); clip-path: inset(68% 0 14%); }
-  73% { opacity: .4; transform: translate(5px); clip-path: inset(24% 0 58%); }
-  74.1% { opacity: 0; transform: translate(0); clip-path: inset(0); }
-  74.4% { opacity: .5; transform: translate(-4px); clip-path: inset(82% 0 7%); }
+  0%, 10.8%, 12.5%, 38.3%, 40.3%, 72.6%, 75.2%, 92%, 93.4%, 100% { opacity: 0; transform: translate(0); clip-path: inset(0); }
+  10.9% { opacity: .55; transform: translate(-7px, 1px); clip-path: inset(9% 0 76%); }
+  11.5% { opacity: .34; transform: translate(4px); clip-path: inset(19% 0 68%); }
+  38.4% { opacity: .82; transform: translate(-13px, 1px); clip-path: inset(43% 0 34%); }
+  39.1% { opacity: .5; transform: translate(9px, -2px); clip-path: inset(68% 0 14%); }
+  39.7% { opacity: .28; transform: translate(-5px); clip-path: inset(26% 0 61%); }
+  72.7% { opacity: .74; transform: translate(-9px, 2px); clip-path: inset(12% 0 66%); }
+  73.4% { opacity: .42; transform: translate(6px, -1px); clip-path: inset(58% 0 26%); }
+  74.2% { opacity: .62; transform: translate(-4px); clip-path: inset(82% 0 7%); }
+  92.1% { opacity: .4; transform: translate(5px); clip-path: inset(32% 0 56%); }
+  92.7% { opacity: .22; transform: translate(-3px); clip-path: inset(73% 0 18%); }
 }
 @keyframes hero-glitch-acid {
-  0%, 70%, 75.2%, 100% { opacity: 0; transform: translate(0); clip-path: inset(0); }
-  70.2% { opacity: .66; transform: translate(11px, -1px); clip-path: inset(16% 0 63%); }
-  71% { opacity: .72; transform: translate(-8px, 2px); clip-path: inset(50% 0 28%); }
-  71.8% { opacity: 0; transform: translate(0); clip-path: inset(0); }
-  72.1% { opacity: .5; transform: translate(8px, -2px); clip-path: inset(73% 0 9%); }
-  73% { opacity: .78; transform: translate(-5px); clip-path: inset(30% 0 51%); }
-  74.1% { opacity: 0; transform: translate(0); clip-path: inset(0); }
-  74.4% { opacity: .44; transform: translate(5px); clip-path: inset(6% 0 84%); }
+  0%, 17%, 19%, 51.8%, 54.1%, 80.8%, 83.1%, 100% { opacity: 0; transform: translate(0); clip-path: inset(0); }
+  17.1% { opacity: .46; transform: translate(6px); clip-path: inset(6% 0 84%); }
+  17.7% { opacity: .66; transform: translate(-5px, 1px); clip-path: inset(50% 0 35%); }
+  18.3% { opacity: .3; transform: translate(3px); clip-path: inset(29% 0 62%); }
+  51.9% { opacity: .72; transform: translate(11px, -1px); clip-path: inset(16% 0 63%); }
+  52.6% { opacity: .5; transform: translate(-8px, 2px); clip-path: inset(55% 0 24%); }
+  53.4% { opacity: .78; transform: translate(5px); clip-path: inset(73% 0 9%); }
+  80.9% { opacity: .38; transform: translate(-5px); clip-path: inset(35% 0 52%); }
+  81.6% { opacity: .7; transform: translate(8px, -2px); clip-path: inset(11% 0 71%); }
+  82.4% { opacity: .44; transform: translate(-4px); clip-path: inset(82% 0 8%); }
 }
 @keyframes hero-glitch-scan {
-  0%, 69.8%, 75.4%, 100% { top: 15%; opacity: 0; transform: scaleX(.5); }
-  70.1% { top: 15%; opacity: .9; transform: scaleX(1); }
+  0%, 21.8%, 25.2%, 70.8%, 75.4%, 100% { top: 15%; opacity: 0; transform: scaleX(.5); }
+  22.1% { top: 15%; opacity: .62; transform: scaleX(.72); }
+  24.7% { top: 58%; opacity: .28; transform: scaleX(.44); }
+  71.1% { top: 15%; opacity: .9; transform: scaleX(1); }
   74.8% { top: 84%; opacity: .45; transform: scaleX(.76); }
 }
 .hero-tagline {
@@ -523,5 +541,7 @@ footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.5r
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
   .site-header { transition: none !important; }
   .hero-wordmark, .hero-logo, .hero-tagline span, .hero-actions, .hero-tear { opacity: 1 !important; clip-path: none !important; }
+  .hero-logo { animation: none !important; filter: none !important; transform: none !important; }
+  .hero-logo-glitch, .hero-logo-scan { display: none; }
   .archive-rule { transform: scaleX(1); }
 }
