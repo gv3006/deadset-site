@@ -59,14 +59,6 @@ export default function Home() {
         </aside>
 
         <section className="about-section paper-section section-pad" id="about">
-          <div className="section-atmosphere about-atmosphere" aria-hidden="true">
-            <Image
-              src="/media/atmosphere/drummer-candid.jpg"
-              alt=""
-              fill
-              sizes="(max-width: 680px) 88vw, (max-width: 900px) 72vw, 54vw"
-            />
-          </div>
           <div className="about-copy">
             <p className="micro-label">About Deadset</p>
             <h2>Built for the<br />live room.</h2>
@@ -75,7 +67,7 @@ export default function Home() {
             {/* TODO: Replace with official Deadset biography when available. */}
           </div>
           <figure className="about-photo">
-            <Image src="/media/live/hero-live.jpg" width={1536} height={2048} sizes="(max-width: 900px) 92vw, 36vw" alt="Members of Deadset performing together onstage" />
+            <Image src="/media/atmosphere/drummer-candid.jpg" width={2048} height={1536} sizes="(max-width: 900px) 88vw, 38vw" alt="Deadset drummer holding a cymbal backstage" />
           </figure>
 
           <div className="about-members" aria-labelledby="members-heading">
