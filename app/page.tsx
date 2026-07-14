@@ -96,9 +96,23 @@ export default function Home() {
         <section className="archive-section section-pad" id="history">
           <div className="archive-intro">
             <div className="section-heading"><p className="micro-label">Past shows</p><h2>Where we&apos;ve<br />played.</h2></div>
-            <figure className="archive-photo">
-              <Image src="/media/live/bass-stage.jpg" width={1536} height={2048} sizes="(max-width: 680px) 62vw, (max-width: 900px) 28vw, 18vw" alt="Deadset bassist performing onstage with the drummer behind her" />
-            </figure>
+            <div className="archive-photo-cloud" aria-hidden="true">
+              <figure className="archive-cloud-photo archive-cloud-photo-a">
+                <Image src="/media/live/full-band-stage.jpg" width={2048} height={1536} sizes="(max-width: 680px) 68vw, (max-width: 900px) 48vw, 32vw" alt="" />
+              </figure>
+              <figure className="archive-cloud-photo archive-cloud-photo-b">
+                <Image src="/media/live/hero-live.jpg" width={1536} height={2048} sizes="(max-width: 680px) 31vw, (max-width: 900px) 24vw, 17vw" alt="" />
+              </figure>
+              <figure className="archive-cloud-photo archive-cloud-photo-c">
+                <Image src="/media/live/live-wide.jpg" width={2048} height={1536} sizes="(max-width: 680px) 62vw, (max-width: 900px) 44vw, 28vw" alt="" />
+              </figure>
+              <figure className="archive-cloud-photo archive-cloud-photo-d">
+                <Image src="/media/live/bass-stage.jpg" width={1536} height={2048} sizes="(max-width: 680px) 29vw, (max-width: 900px) 22vw, 15vw" alt="" />
+              </figure>
+              <figure className="archive-cloud-photo archive-cloud-photo-e">
+                <Image src="/media/live/bass-closeup.jpg" width={1536} height={2048} sizes="(max-width: 680px) 26vw, (max-width: 900px) 20vw, 13vw" alt="" />
+              </figure>
+            </div>
             <div className="archive-note"><p>Past bills, benefits, acoustic sets, house shows, and the flyers that marked Deadset&apos;s run around Madison. Open a flyer for the full view.</p></div>
           </div>
           <div className="archive-rule" aria-hidden="true" />

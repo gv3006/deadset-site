@@ -246,10 +246,19 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .archive-section { position: relative; background: var(--signal); color: var(--paper); }
 .archive-section::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .11; background: repeating-linear-gradient(0deg, transparent 0 4px, #000 5px, transparent 6px); }
-.archive-intro { position: relative; display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(170px, .48fr) minmax(220px, .72fr); gap: clamp(1.5rem, 4vw, 4.5rem); align-items: end; }
-.archive-photo { justify-self: center; width: min(100%, 270px); margin: 0 0 .6rem; padding: .4rem; border: 1px solid rgba(10,10,9,.48); background: var(--paper); box-shadow: 6px 7px 0 rgba(10,10,9,.45); transform: rotate(-1.4deg); }
-.archive-photo img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; filter: contrast(1.08) saturate(.86); }
-.archive-note { max-width: 28rem; padding-bottom: .8rem; font-size: 1.15rem; line-height: 1.45; }
+.archive-intro { position: relative; isolation: isolate; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(250px, .75fr); gap: clamp(2rem, 6vw, 7rem); align-items: end; min-height: clamp(570px, 47vw, 720px); }
+.archive-intro .section-heading { position: relative; z-index: 6; align-self: center; width: max-content; max-width: 100%; }
+.archive-intro .section-heading::before { content: ""; position: absolute; z-index: -1; inset: -1.2rem -1.5rem -1.4rem -1rem; background: rgba(184,41,32,.94); clip-path: polygon(1% 5%, 97% 0, 100% 92%, 3% 100%); }
+.archive-photo-cloud { position: absolute; z-index: 2; inset: -1.5rem 7% -1rem 24%; pointer-events: none; }
+.archive-cloud-photo { position: absolute; margin: 0; padding: clamp(.2rem, .42vw, .42rem); overflow: hidden; border: 1px solid rgba(10,10,9,.55); background: var(--paper); box-shadow: 7px 8px 0 rgba(10,10,9,.44); }
+.archive-cloud-photo img { width: 100%; height: 100%; object-fit: cover; filter: contrast(1.08) saturate(.86); }
+.archive-cloud-photo-a { z-index: 2; top: 0; right: 1%; width: 47%; aspect-ratio: 4 / 3; transform: rotate(3deg); }
+.archive-cloud-photo-b { z-index: 3; top: 4%; left: 8%; width: 24%; aspect-ratio: 3 / 4; transform: rotate(-5.5deg); }
+.archive-cloud-photo-c { z-index: 4; bottom: 1%; left: 27%; width: 41%; aspect-ratio: 4 / 3; transform: rotate(-2.5deg); }
+.archive-cloud-photo-d { z-index: 5; top: 37%; right: 5%; width: 23%; aspect-ratio: 3 / 4; transform: rotate(5deg); }
+.archive-cloud-photo-e { z-index: 1; bottom: 5%; left: 3%; width: 19%; aspect-ratio: 3 / 4; transform: rotate(4deg); }
+.archive-note { position: relative; z-index: 6; justify-self: end; max-width: 28rem; margin-bottom: 1rem; padding: 1rem 0 1rem 1.2rem; border-left: 3px solid var(--paper); background: linear-gradient(90deg, rgba(10,10,9,.2), transparent); font-size: 1.15rem; line-height: 1.45; }
+.archive-note p { margin: 0; }
 .archive-note .text-link { margin-top: 1rem; }
 .archive-rule { position: relative; height: 4px; margin: clamp(3rem, 6vw, 6rem) 0 2rem; background: var(--paper); transform: scaleX(.08); transform-origin: left; }
 .archive-shell { position: relative; }
@@ -322,9 +331,10 @@ footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.5r
   .about-photo { justify-self: start; width: min(70vw, 480px); }
   .show-ticket { grid-template-columns: minmax(145px, .38fr) 1fr; }
   .ticket-photo { grid-column: 1 / -1; min-height: 260px; max-height: 360px; border-top: 2px solid var(--ink); border-left: 0; }
-  .archive-intro { grid-template-columns: minmax(0, 1.3fr) minmax(160px, .55fr); }
-  .archive-photo { grid-column: 2; grid-row: 1; }
-  .archive-note { grid-column: 1 / -1; max-width: 38rem; }
+  .archive-intro { display: block; min-height: 0; }
+  .archive-intro .section-heading { width: fit-content; }
+  .archive-photo-cloud { position: relative; inset: auto; height: clamp(470px, 67vw, 580px); margin: 1.8rem 0 2.4rem; }
+  .archive-note { max-width: 38rem; margin: 0; }
   .marks-head p:last-child { margin-top: 2rem; }
   .identity-field { min-height: 760px; }
   .poster-dialog-panel { grid-template-columns: 1fr; grid-template-rows: auto auto auto; padding-top: 3.8rem; }
@@ -363,9 +373,14 @@ footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.5r
   .ticket-body { padding: 2rem 1.3rem 2.5rem; }
   .ticket-body h3 { font-size: clamp(2.8rem, 15vw, 4.8rem); }
   .ticket-photo { grid-column: auto; min-height: 0; aspect-ratio: 16 / 7; }
-  .archive-intro { grid-template-columns: 1fr; }
-  .archive-photo { grid-column: auto; grid-row: auto; justify-self: end; width: min(62vw, 260px); }
-  .archive-note { grid-column: auto; }
+  .archive-intro .section-heading::before { inset: -.6rem -.7rem -.75rem -.45rem; }
+  .archive-photo-cloud { height: 430px; margin: 1.35rem 0 1.8rem; }
+  .archive-cloud-photo { box-shadow: 5px 6px 0 rgba(10,10,9,.44); }
+  .archive-cloud-photo-a { top: 0; right: auto; left: 0; width: 70%; }
+  .archive-cloud-photo-b { top: 8%; right: 0; left: auto; width: 32%; }
+  .archive-cloud-photo-c { right: 4%; bottom: 2%; left: auto; width: 65%; }
+  .archive-cloud-photo-d { top: auto; right: auto; bottom: 0; left: 0; width: 29%; }
+  .archive-cloud-photo-e { z-index: 5; top: 32%; right: 7%; bottom: auto; left: auto; width: 27%; }
   .about-copy h2 { font-size: clamp(3.4rem, 17vw, 5.4rem); }
   .about-copy p:not(.micro-label) { font-size: 1.08rem; }
   .archive-note { padding-bottom: 0; }
